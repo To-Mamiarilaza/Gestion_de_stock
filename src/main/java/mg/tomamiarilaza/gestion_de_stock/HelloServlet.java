@@ -1,4 +1,4 @@
-package com.example.gestion_de_stock;
+package mg.tomamiarilaza.gestion_de_stock;
 
 import java.io.*;
 
