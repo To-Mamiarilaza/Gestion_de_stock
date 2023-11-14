@@ -1,4 +1,4 @@
-package mg.tomamiarilaza.gestion_de_stock.connection;
+package connection;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -16,10 +16,6 @@ public class DBConnection {
 
         connection.setAutoCommit(false);
         return connection;
-    }
-
-    public static void main(String[] args) throws Exception {
-        System.out.println("Connection : " + getConnection());
     }
 
 }
