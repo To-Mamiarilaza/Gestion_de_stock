@@ -10,7 +10,7 @@ public class EtatStock {
     LocalDate startDate;
     LocalDate endDate;
     String idArticle;
-    Store store;
+    String idStore;
     List<Stock> stockList;
     double stockTotalValue;
 
@@ -40,12 +40,12 @@ public class EtatStock {
         this.idArticle = idArticle;
     }
 
-    public Store getStore() {
-        return store;
+    public String getIdStore() {
+        return idStore;
     }
 
-    public void setStore(Store store) {
-        this.store = store;
+    public void setIdStore(String idStore) {
+        this.idStore = idStore;
     }
 
     public List<Stock> getStockList() {
@@ -66,19 +66,33 @@ public class EtatStock {
 
     // Constructor
 
-    public EtatStock(LocalDate startDate, LocalDate endDate, String idArticle, Store store, List<Stock> stockList, double stockTotalValue) {
+    public EtatStock(LocalDate startDate, LocalDate endDate, String idArticle, String idStore, List<Stock> stockList, double stockTotalValue) {
         this.startDate = startDate;
         this.endDate = endDate;
         this.idArticle = idArticle;
-        this.store = store;
+        this.idStore = idStore;
         this.stockList = stockList;
         this.stockTotalValue = stockTotalValue;
     }
 
-    public EtatStock(LocalDate startDate, LocalDate endDate, String idArticle, Store store) {
+    public EtatStock(LocalDate startDate, LocalDate endDate, String idArticle, String idStore) {
         this.startDate = startDate;
         this.endDate = endDate;
         this.idArticle = idArticle;
-        this.store = store;
+        this.idStore = idStore;
+    }
+
+    // Class methods
+    // Displaying etat stock detail
+    public void showDetail() {
+        System.out.println("ETAT DE STOCK");
+        System.out.println(getStartDate() + "  -  " + getEndDate());
+        System.out.println("ID Article : " + getIdArticle());
+        System.out.println("ID Store : " + getIdStore());
+        System.out.println("----------");
+        for (Stock stock :
+                getStockList()) {
+            System.out.println(stock.getArticle().getIdArticle() + "  " + stock.getArticle().getArticleCode() + "  " + stock.getStore().getIdStore() + "  " + stock.getArticle().getUnite().getUniteName() + "  " + stock.getInitialQuantity() + "  " + stock.getRemain() + "  " + stock.getUnitPrice() + "  " + stock.getAmount());
+        }
     }
 }

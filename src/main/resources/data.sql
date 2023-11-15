@@ -113,7 +113,7 @@ DELETE FROM store;
 
 -- View for getting current remaining quantity of each incoming
 CREATE OR REPLACE VIEW v_incoming_stock AS
-SELECT i.id_incoming, date, id_article, id_store, (quantity - COALESCE(somme_sortie, 0)) as reste, unit_price, etat FROM incoming i LEFT JOIN
+SELECT i.id_incoming, date, id_article, id_store, (quantity - COALESCE(somme_sortie, 0)) as quantity, unit_price, etat FROM incoming i LEFT JOIN
 (SELECT id_incoming, SUM(quantity) as somme_sortie FROM outgoing WHERE etat = 1 GROUP BY id_incoming) AS o ON
 i.id_incoming = o.id_incoming WHERE (quantity - COALESCE(somme_sortie, 0)) != 0 AND etat = 1;
 

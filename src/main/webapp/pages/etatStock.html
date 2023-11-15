@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Etat de stock</title>
+</head>
+
+<body>
+    <!-- As a link -->
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand mx-5" href="#">GESTION DE STOCK</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row mt-4">
+            <h4 class="page-title">ETAT DE STOCK</h4>
+        </div>
+
+        <form action="" class="form row">
+            <div class="col-md-6 mt-3">
+                <div class="form-group">
+                    <label for="startDate" class="form-label">Date debut</label>
+                    <input type="date" class="form-control" name="startDate" id="startDate">
+                </div>
+                <div class="form-group mt-3">
+                    <label for="endDate" class="form-label">Date fin</label>
+                    <input type="date" class="form-control" name="endDate" id="endDate">
+                </div>
+            </div>
+            <div class="col-md-6 mt-3">
+                <div class="form-group">
+                    <label for="articleCode" class="form-label">Code Article</label>
+                    <input type="text" class="form-control" name="articleCode" id="articleCode">
+                </div>
+                <div class="form-group mt-3">
+                    <label for="idMagasin" class="form-label">ID du Magasin</label>
+                    <input type="text" class="form-control" name="idMagasin" id="idMagasin">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <input type="button" class="btn btn-info px-5 mt-4" value="Valider">
+            </div>
+        </form>
+
+        <table class="table table-striped mt-5">
+            <thead>
+                <tr>
+                    <th>ID Article</th>
+                    <th>Code Article</th>
+                    <th>Unite</th>
+                    <th>Quantite Initiale</th>
+                    <th>Reste</th>
+                    <th>Prix Unitaire</th>
+                    <th>Montant</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ART0001</td>
+                    <td>R011</td>
+                    <td>kg</td>
+                    <td>0.0</td>
+                    <td>100.0</td>
+                    <td>12 000 AR</td>
+                    <td>1 200 000 AR</td>
+                </tr>
+                <tr>
+                    <td>ART0001</td>
+                    <td>R011</td>
+                    <td>kg</td>
+                    <td>0.0</td>
+                    <td>100.0</td>
+                    <td>12 000 AR</td>
+                    <td>1 200 000 AR</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>

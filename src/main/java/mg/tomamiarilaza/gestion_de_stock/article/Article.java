@@ -24,6 +24,10 @@ public class Article {
     @DBField(name = "etat")
     int etat;
 
+    // movement type
+    public static final String FIFO_METHOD = "FIFO";
+    public static final String LIFO_METHOD = "LIFO";
+
     // Getter and setter
 
     public String getIdArticle() {
